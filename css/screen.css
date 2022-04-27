@@ -548,23 +548,13 @@ a:focus {
     width: 100vw;
     background-color: #fff;
     transform: translateX(-100%);
+    transition: transform .25s ease;
 }
 
 .has-mobile-nav .c-mobile-nav__body {
     transform: translateX(0);
-    transition: transform .25s ease;
-    
 }
 
-.c-page{
-    transform: translateX(0);
-
-}
-.has-mobile-nav .c-page{
-    transform: translateX(25%);
-    transition: transform .25s ease;
-    
-}
 @media (min-width: 768px) {
     .c-mobile-nav__body {
         padding: 48px;
@@ -577,6 +567,15 @@ a:focus {
     .c-mobile-nav {
         display: none !important;
     }
+}
+
+.c-page {
+    transform: translateX(0);
+}
+
+.has-mobile-nav .c-page {
+    transform: translateX(25%);
+    transition: transform .25s ease;
 }
 /*
     Component: footer
